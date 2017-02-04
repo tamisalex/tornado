@@ -1,0 +1,8 @@
+---
+project: tcelambda
+default-region: us-east-1
+code-bucket: gordon-tcelambda-db24ccd4
+apps:
+  - gordon.contrib.helpers
+  - gordon.contrib.lambdas
+  - tornadoapp
