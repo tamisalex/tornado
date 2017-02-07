@@ -8,6 +8,7 @@ from process import StormDataEventCollector
 from process import RadarDataCollector
 from process import RadarDataProcessor
 from process import ModelBuilder
+from process import RadarImageCreator
 
 if __name__ == '__main__':
     
@@ -26,10 +27,13 @@ if __name__ == '__main__':
     #rdp = RadarDataProcessor.RadarDataProcessor()
     #rdp.process()
     
+    ric = RadarImageCreator.RadarImageCreator()
+    ric.process()
+    
     print "Building Model"
     
-    mb = ModelBuilder.ModelBuilder()
-    mb.buildModel()
+#    mb = ModelBuilder.ModelBuilder()
+#    mb.buildModel()
     
     print "Finished"
     
