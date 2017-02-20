@@ -14,13 +14,13 @@ if __name__ == '__main__':
     
     print "Collecting Storm Data Events..."
      
-#     sdec = StormDataEventCollector.StormDataEventCollector()
-#     sdec.collect()
+    #sdec = StormDataEventCollector.StormDataEventCollector()
+    #sdec.collect()
     
     print "Collecting Radar Data..."
      
-#     rdc = RadarDataCollector.RadarDataCollector()
-#     rdc.collect()
+    #rdc = RadarDataCollector.RadarDataCollector()
+    #rdc.collect()
     
     print "Processing Radar Data..."
     

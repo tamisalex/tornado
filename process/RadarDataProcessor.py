@@ -244,8 +244,6 @@ class RadarDataProcessor(object):
         for i in range(lenOfData):
         #for i in range(392,lenOfWeather):
         
-            
-        
             print "Percent Complete: ", round((i+1)/float(lenOfData)*100,2)
             print "Reading "+ data.loc[i,"Filename"] + " ..."
             radar = ""

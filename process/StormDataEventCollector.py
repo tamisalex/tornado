@@ -68,7 +68,7 @@ class StormDataEventCollector(object):
     
         
         #fileTypes = ["details","locations","fatalities"]
-        years = range(2015,2016)
+        years = range(2010,2016)
         years = map(str,years)
         detailsDF = pd.DataFrame()
         locationsDF = pd.DataFrame()
@@ -90,8 +90,8 @@ class StormDataEventCollector(object):
         
         fatalitiesDF.to_sql("fatalities",con = engine, if_exists = "replace")
         
-        AlabamaDF = detailsDF[detailsDF["state"] ==  "ALABAMA"].copy()
-        AlabamaDF = AlabamaDF[AlabamaDF["wfo"] != "TAE"]
+        AlabamaDF = detailsDF[detailsDF["state"].isin(["MISSISSIPPI","GEORGIA","LOUISIANA","TENNESEE","FLORIDA","ALABAMA"])].copy()
+        #AlabamaDF = AlabamaDF[AlabamaDF["wfo"] != "TAE"]
         AlabamaDF = AlabamaDF[["wfo","episode_id","event_id","event_type","begin_date_time","end_date_time","begin_lat","begin_lon"]]
         AlabamaDF = AlabamaDF.dropna()
         try:
